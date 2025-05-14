@@ -1,0 +1,19 @@
+.header-container {
+    width: 86vw;
+    height: 8vh;
+    background-color: #003399;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        margin: 1rem;
+        color: #fff;
+    }
+
+    a {
+        margin: 1rem;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+}
