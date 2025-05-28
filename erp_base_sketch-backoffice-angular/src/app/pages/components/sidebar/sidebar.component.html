@@ -1,0 +1,101 @@
+<div>
+    <img (click)="navigateToHome()" src="assets/icons/beredia.svg">
+
+    <ul>
+        @if (router.url == '/inicio/modulos' || router.url == '/inicio/perfil') {
+        <li routerLink="/">
+            <mat-icon class="icon">list</mat-icon>
+            <p>Módulos</p>
+        </li>
+        <li routerLink="/inicio/perfil">
+            <mat-icon class="icon">account_circle</mat-icon>
+            <p>Perfil</p>
+        </li>
+        }
+
+        @if (
+        router.url == '/inicio/modulos/recursos-humanos' ||
+        router.url == '/inicio/modulos/recursos-humanos/colaboradores' ||
+        router.url == '/inicio/modulos/recursos-humanos/vacaciones' ||
+        router.url == '/inicio/modulos/recursos-humanos/viaticos' ||
+        router.url == '/inicio/modulos/recursos-humanos/prestaciones' ||
+        router.url == '/inicio/modulos/recursos-humanos/capacitaciones'
+        ) {
+        <li routerLink="modulos/recursos-humanos/colaboradores">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Colaboradores</p>
+        </li>
+        <li routerLink="modulos/recursos-humanos/vacaciones">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Vacaciones</p>
+        </li>
+        <li routerLink="modulos/recursos-humanos/viaticos">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Viáticos</p>
+        </li>
+        <li routerLink="modulos/recursos-humanos/prestaciones">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Prestaciones</p>
+        </li>
+        <li routerLink="modulos/recursos-humanos/capacitaciones">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Capacitaciones</p>
+        </li>
+        }
+
+        @if (
+        router.url == '/inicio/modulos/finanzas' ||
+        router.url == '/inicio/modulos/finanzas/cuentas-empleados' ||
+        router.url == '/inicio/modulos/finanzas/transacciones' ||
+        router.url == '/inicio/modulos/finanzas/nomina'
+        ) {
+        <li routerLink="modulos/finanzas/cuentas-empleados">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Cuentas Empleados</p>
+        </li>
+        <li routerLink="modulos/finanzas/transacciones">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Transacciones</p>
+        </li>
+        <li routerLink="modulos/finanzas/nomina">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Nómina</p>
+        </li>
+        }
+
+        @if (
+        router.url == '/inicio/modulos/inventario' ||
+        router.url == '/inicio/modulos/inventario/mercancia' ||
+        router.url == '/inicio/modulos/inventario/proveedores'
+        ) {
+        <li routerLink="modulos/inventario/mercancia">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Mercancia</p>
+        </li>
+        <li routerLink="modulos/inventario/proveedores">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Proveedores</p>
+        </li>
+        }
+
+        @if (
+        router.url == '/inicio/modulos/kiosko' ||
+        router.url == '/inicio/modulos/kiosko/tickets' ||
+        router.url == '/inicio/modulos/kiosko/vacaciones' ||
+        router.url == '/inicio/modulos/kiosko/viaticos'
+        ) {
+        <li routerLink="modulos/kiosko/tickets">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Tickets</p>
+        </li>
+        <li routerLink="modulos/kiosko/vacaciones">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Vacaciones</p>
+        </li>
+        <li routerLink="modulos/kiosko/viaticos">
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <p>Viáticos</p>
+        </li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,48 @@
+<div class="crud-container">
+
+    <h3>Viáticos</h3>
+
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>Identificador de solicitud</th>
+            <td mat-cell *matCellDef="let travelExpensesRequest"> {{travelExpensesRequest.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="employeeName">
+            <th mat-header-cell *matHeaderCellDef>Nombre</th>
+            <td mat-cell *matCellDef="let travelExpensesRequest"> {{travelExpensesRequest.employeeName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="employeeLastName">
+            <th mat-header-cell *matHeaderCellDef>Apellidos</th>
+            <td mat-cell *matCellDef="let travelExpensesRequest"> {{travelExpensesRequest.employeeLastName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef>Monto</th>
+            <td mat-cell *matCellDef="let travelExpensesRequest">
+                {{
+                travelExpensesRequest.amount.toLocaleString('en-US', { style: 'currency', currency: 'USD'})
+                }}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Acciones</th>
+            <td mat-cell *matCellDef="let travelExpensesRequest">
+                <button mat-icon-button matTooltip="Revisar facturas">
+                    <mat-icon class="gray-color">list</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Aprobar">
+                    <mat-icon class="aquamarine-color">check</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Rechazar">
+                    <mat-icon class="darkred-color">close</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

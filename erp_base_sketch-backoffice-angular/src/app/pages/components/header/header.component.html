@@ -1,0 +1,12 @@
+<div class="header-container">
+    <p>Beredia ERP</p>
+
+    <div class="options-container">
+        <a mat-icon-button routerLink="/inicio/modulos/kiosko/tickets" style="color: #fff;"><mat-icon>build</mat-icon></a>
+        <a mat-icon-button [matMenuTriggerFor]="menu" style="color: #fff;"><mat-icon>account_circle</mat-icon></a>
+    </div>
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">Cerrar sesión</button>
+    </mat-menu>
+</div>

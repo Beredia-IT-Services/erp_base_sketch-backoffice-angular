@@ -1,0 +1,16 @@
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: #dcdcdc;
+
+    .content-container {
+        overflow: hidden;
+
+        .center-container {
+            overflow-y: auto;
+            width: 86vw;
+            height: 87vh;
+        }
+    }
+}

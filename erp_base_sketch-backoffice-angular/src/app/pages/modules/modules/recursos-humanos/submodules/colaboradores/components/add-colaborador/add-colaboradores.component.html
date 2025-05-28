@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>
+    {{ data.editMode ? 'Actualizar información del Empleado' : 'Registrar nuevo Empleado' }}
+</h2>
+<div class="form-container">
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput [value]="employee?.name" [(ngModel)]="name">
+            <!-- <mat-hint>{{ authValueErrorMsg }}</mat-hint> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Apellidos</mat-label>
+            <input matInput [value]="employee?.lastName" [(ngModel)]="lastName">
+            <!-- <mat-hint>{{ authValueErrorMsg }}</mat-hint> -->
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>Edad</mat-label>
+            <input matInput [value]="employee?.age" [(ngModel)]="age">
+            <!-- <mat-hint>{{ authValueErrorMsg }}</mat-hint> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Puesto</mat-label>
+            <input matInput [value]="employee?.jobPosition" [(ngModel)]="jobPosition">
+            <!-- <mat-hint>{{ authValueErrorMsg }}</mat-hint> -->
+        </mat-form-field>
+    </div>
+    <mat-form-field appearance="outline">
+        <mat-label>Salario</mat-label>
+        <input matInput [value]="employee?.salary" [(ngModel)]="salary">
+        <!-- <mat-hint>{{ authValueErrorMsg }}</mat-hint> -->
+    </mat-form-field>
+</div>
+
+<div class="dialog-buttons-container">
+    <button mat-stroked-button cdkFocusInitial (click)="close()" class="dialog-button cancel-btn"
+        style="margin: 0.1rem;">Cancelar</button>
+    <button mat-stroked-button (click)="save()" class="dialog-button submit-btn" style="margin: 0.1rem;">
+        Guardar
+    </button>
+</div>
+
+<ng-template #empty>
+    <p class="empty-text">Sin asignaciones</p>
+</ng-template>

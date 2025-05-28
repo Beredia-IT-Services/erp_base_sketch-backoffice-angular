@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: sans-serif;
+
+    // ******************** scrollbar ********************
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #003399;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #2c72ff;
+    }
+    // ****************************************
+
+    // ******************** generic tags ********************
+    .link {
+        transition: 0.8s;
+        color: #003399;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .link:hover {
+        transition: 0.8s;
+        color: #2c72ff;
+    }
+
+    .green-color {
+        color: #4ebb69;
+    }
+
+    .aquamarine-color {
+        color: #0cad78;
+    }
+
+    .lightaquamarine-color {
+        color: #8edfcf;
+    }
+
+    .lightyellow-color {
+        color: #decd61;
+    }
+
+    .darkyellow-color {
+        color: #cc8b14;
+    }
+
+    .darkred-color {
+        color: #f96c4a;
+    }
+
+    .lightblue-color {
+        color: #567fcf;
+    }
+
+    .gray-color {
+        color: #a9a9a9;
+    }
+
+    .crud-container {
+        overflow: auto;
+        background-color: #fff;
+        margin: 2rem;
+        padding: 1rem;
+        border: 0.15rem solid #dcdcdc;
+        border-radius: 1rem;
+
+        .row-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: lighter;
+            color: #b1b1b1;
+        }
+    }
+
+    // ****************************************
+}

@@ -1,0 +1,46 @@
+<div class="crud-container">
+
+    <h3>Vacaciones</h3>
+
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>Identificador de solicitud</th>
+            <td mat-cell *matCellDef="let vacationsRequest"> {{vacationsRequest.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="employeeName">
+            <th mat-header-cell *matHeaderCellDef>Nombre</th>
+            <td mat-cell *matCellDef="let vacationsRequest"> {{vacationsRequest.employeeName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="employeeLastName">
+            <th mat-header-cell *matHeaderCellDef>Apellidos</th>
+            <td mat-cell *matCellDef="let vacationsRequest"> {{vacationsRequest.employeeLastName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="days">
+            <th mat-header-cell *matHeaderCellDef>No. de días</th>
+            <td mat-cell *matCellDef="let vacationsRequest"> {{vacationsRequest.days}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="startDate">
+            <th mat-header-cell *matHeaderCellDef>Fecha de inicio</th>
+            <td mat-cell *matCellDef="let vacationsRequest"> {{vacationsRequest.startDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Acciones</th>
+            <td mat-cell *matCellDef="let vacationsRequest">
+                <button mat-icon-button matTooltip="Aprobar">
+                    <mat-icon class="aquamarine-color">check</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Rechazar">
+                    <mat-icon class="darkred-color">close</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

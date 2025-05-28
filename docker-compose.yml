@@ -1,0 +1,11 @@
+services:
+  angular-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./erp_base_sketch-backoffice-angular:/app
+      - ./erp_base_sketch-backoffice-angular/node_modules:/app/node_modules
+    command: sh -c "npm install && ng serve --host 0.0.0.0"
